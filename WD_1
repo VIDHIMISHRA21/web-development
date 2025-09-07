@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life in Mountains</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #87af7c;
+      margin: 0;
+      padding: 0;
+      color: #040603;
+    }
+    header {
+      background-color: #2f542d;
+      color: rgb(249, 254, 249);
+      text-align: center;
+      padding: 15px;
+    }
+    section {
+      background-color: rgb(217, 232, 214);
+      margin: 15px;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    h2 {
+      color: #1c2541;
+    }
+    .btn {
+      background-color: #4bae1e;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .comment {
+      background-color: #e6f0f3;
+      padding: 6px;
+      margin-top: 8px;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #4d6b3a;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    img {
+      width: 200px;
+      margin: 5px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Beauty of Mountains</h1>
+  </header>
+
+  <section>
+    <h2>Glimpses of Mountain Life</h2>
+    <p>Life in the mountains is a unique blend of challenge and tranquility. It's a world where nature sets the pace and humans learn to adapt to its powerful rhythm.</p>
+    <button id="likeBtn" class="btn">Like <span id="likeCount">0</span></button>
+  </section>
+
+  <section>
+    <h2>The Seasons</h2>
+    <ul>
+      <li><b>Winter:</b> This is a time of quiet solitude. Heavy snow blankets the landscape, making travel difficult and life more introspective. People huddle around warm fires, communities rely on stored supplies, and the pace of life slows to a gentle crawl. It's a season of resilience and preparation.Snow covers the mountains. People keep warm and life slows down.</li>
+      <li><b>Summer:</b>The mountains come alive in the summer. Days are long and sunny, perfect for outdoor activities. Shepherds lead their flocks to high-altitude pastures, hikers explore winding trails, and the landscape is a brilliant tapestry of green. It's the most active and vibrant season. Mountains are green. People enjoy walks and outdoor activities.</li>
+      <li><b>Spring:</b>As the snow melts, the mountains awaken. Waterfalls surge, rivers swell, and vibrant wildflowers burst into bloom. This is a time of renewal and hard work, as farmers prepare their fields and communities clear pathways for the warmer months ahead. Flowers bloom and rivers flow. Farmers prepare their fields.</li>
+      <li><b>Autumn:</b> The air turns crisp and a stunning display of red, orange, and gold sweeps across the slopes. This is a crucial time for harvesting crops, gathering firewood, and preparing for the coming winter. The beauty of the season is matched by the urgent need to be ready for the cold.Leaves turn golden. People harvest crops and prepare for winter.</li>
+    </ul>
+  </section>
+<section> 
+  <h2><dl>Challenges and Adaptations</dl></h2>
+  <dd>A Glimpse into Mountain Life ⛰️
+Life in the mountains is a unique blend of challenge and tranquility. It's a world where nature sets the pace and humans learn to adapt to its powerful rhythm.<BR>
+
+The Rhythm of the Seasons
+Life in the mountains is deeply tied to the changing seasons, each bringing its own character and demands.<br>
+
+Winter: This is a time of quiet solitude. Heavy snow blankets the landscape, making travel difficult and life more introspective.<BR> People huddle around warm fires, communities rely on stored supplies, and the pace of life slows to a gentle crawl. It's a season of resilience and preparation.<br>
+
+Spring: As the snow melts, the mountains awaken. Waterfalls surge, rivers swell, and vibrant wildflowers burst into bloom.<BR> This is a time of renewal and hard work, as farmers prepare their fields and communities clear pathways for the warmer months ahead.<BR>
+
+Summer: The mountains come alive in the summer. Days are long and sunny, perfect for outdoor activities.<BR> Shepherds lead their flocks to high-altitude pastures, hikers explore winding trails, and the landscape is a brilliant tapestry of green. It's the most active and vibrant season.<br>
+
+Autumn: The air turns crisp and a stunning display of red, orange, and gold sweeps across the slopes.<BR> This is a crucial time for harvesting crops, gathering firewood, and preparing for the coming winter. The beauty of the season is matched by the urgent need to be ready for the cold.<BR>
+
+Challenges and Adaptations
+Living at high altitudes isn't easy. The air is thinner, making physical tasks more demanding, and the weather is notoriously unpredictable.<BR> A sunny morning can turn into a blizzard within hours. Yet, mountain communities have a profound wisdom born from living in such a demanding environment.</dd>
+
+</section>
+
+</body>
+  <section>
+    <h2>SHOWCASE</h2> 
+    <p>
+      <img src="snow.png" alt="Snowy mountains">
+      <img src="j.png" alt="Mountain village">
+      <img src="water.png" alt="River in valley">
+      <img src="vi.png" alt="Mountain view">
+      <img src="da.png" alt="Dal Lake">
+      <img src="pahad.png" alt="pahad">
+  </section>
+<SECTION>
+  
+    <h2>YOUR VIEWS</h2>
+    <form id="commentForm">
+      <input id="name" type="text" placeholder="Your name" required><br><br>
+      <textarea id="message" rows="3" placeholder="Your comment" required></textarea><br><br>
+      <button type="submit" class="btn">Post</button>
+    </form>
+    <div id="comments"></div>
+  </section>
+
+<div class="links-section">
+        <h2>Useful Links</h2>
+        <a href="https://www.google.com" target="_blank">Google</a><br>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a><br>
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a><br>
+    </div>
+  <footer>
+    <p>© <span id="year"></span> life in mountains</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    let likes = 0;
+    document.getElementById('likeBtn').addEventListener('click', function() {
+      likes++;
+      document.getElementById('likeCount').textContent = likes;
+    });
+
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      if(name && message){
+        const div = document.createElement('div');
+        div.className = 'comment';
+        div.innerHTML = '<b>' + name + ':</b> ' + message;
+        document.getElementById('comments').prepend(div);
+        this.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
